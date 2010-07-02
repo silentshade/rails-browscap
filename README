@@ -3,6 +3,7 @@ Browscap
 
 Using the excellent http://github.com/lfittl/browscap parser as a rail plugin
 
+run rake browscap:update to get the new browscap.ini from http://browsers.garykeith.com
 
 Example
 =======
