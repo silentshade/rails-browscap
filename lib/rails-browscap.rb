@@ -1,0 +1,2 @@
+require 'inifile'
+require 'browscap'
