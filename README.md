@@ -10,7 +10,9 @@ Known Issues
 
 Ruby 1.9:
 
-The file is LATIN1 and contains UTF-8 encoded chars
+The file is ISO-8859-1
+
+The hex escape char \xdf in
 
 Line 3553
 
@@ -18,11 +20,17 @@ Line 3553
     Parent=Image Crawlers
     Browser=Gallery Grabber
 
-This makes inifile fails. Delete this line or encode it properly.
+makes the current version of browscap choke. Remove it until browscap is fixed.
 
-    [Der große BilderSauger*]
-    Parent=Image Crawlers
-    Browser=Gallery Grabber
+Also Line 5228
+
+[www.substancia.com AutoHTTPAgent (ver *)]
+Parent=Version Checkers
+Browser=Substância
+
+the 'â' make inifile < 0.4.0 choke.
+
+The lib requires inifile >= 0.4.0 so this should be fine.
 
 Example
 =======
@@ -42,6 +50,5 @@ TODO
 
 * Initialize and define current_browser in the plugin itself
 * Fix task (does not show up in rake -T)
-* Convert file to proper UTF8
 
 Copyright (c) 2010 [Gilles Devaux], released under the MIT license
