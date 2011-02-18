@@ -1,2 +1,1 @@
-# Install hook code here
-puts "Run rake browscap:update to finish the install"
+puts "Run rails generate rails_browscap:install to finish the install"

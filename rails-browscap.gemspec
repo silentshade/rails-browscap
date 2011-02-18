@@ -10,8 +10,12 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.summary  = "rails plugin around the broswcap gem"
   s.files    = Dir.glob("{rails,tasks,lib}/**/*") + %w(MIT-LICENSE README.md install.rb uninstall.rb)
+  s.add_dependency('rails', '~>3.0.0')
   s.add_dependency('browscap', '~>0.1.0')
   s.add_dependency('inifile', '~>0.4.0')
+  s.add_dependency('activesupport', '~>3.0.4')
+  s.add_dependency('i18n', '~>0.5.0')
+  s.add_development_dependency('test-unit', '2.2.0')
   s.require_path     = "lib"
   s.has_rdoc         = false
   s.extra_rdoc_files = ["README.md"]

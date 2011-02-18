@@ -20,7 +20,7 @@ Line 3553
     Parent=Image Crawlers
     Browser=Gallery Grabber
 
-makes the current version of browscap choke. Remove it until browscap is fixed.
+makes the current version of browscap choke. I have monkey patched browscap so you should be fine.
 
 Also Line 5228
 
@@ -47,8 +47,5 @@ application_controller.rb
 
 TODO
 =======
-
-* Initialize and define current_browser in the plugin itself
-* Fix task (does not show up in rake -T)
 
 Copyright (c) 2010 [Gilles Devaux], released under the MIT license

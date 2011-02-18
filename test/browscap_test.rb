@@ -1,8 +1,13 @@
 require 'test_helper'
 
 class BrowscapTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+
+  setup do
+    @@browscap ||= ::Browscap.new 'config/browscap.ini'
   end
+
+  test "can read a browscap file" do
+    assert_true(@@browscap!=nil)
+  end
+
 end
