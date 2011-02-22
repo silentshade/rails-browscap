@@ -7,6 +7,8 @@ class Browscap
     @@match_cache           ||= {}
 
     if @@user_agent_properties.empty? || @@user_agent_regexps.empty?
+
+      ###patch use encoding with inifile 0.4.0
       ini = IniFile.load(filename, {:encoding => encoding})
 
       # Remote meta sections
@@ -60,6 +62,7 @@ class Browscap
         regexp.gsub! "?", "."
         regexp.gsub! "*", ".*?"
 
+        ###patch, use encoding
         if RUBY_VERSION < '1.9'
           @@user_agent_regexps[section] = Regexp.new(("^%s$" % regexp))
         else

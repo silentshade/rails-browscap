@@ -9,6 +9,7 @@ namespace :browscap do
   
   desc "Update browscap file"
   task :update => :environment do
+    #we need the user agent
     Net::HTTP.start("browsers.garykeith.com") { |http|
       resp = http.get("/stream.asp?BrowsCapINI", {'User-Agent' => 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.9) Gecko/20100824 Firefox/3.6.9'})
       open("#{Rails.root}/config/browscap.ini", "w") { |file|

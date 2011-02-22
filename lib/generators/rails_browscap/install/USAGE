@@ -2,7 +2,7 @@ Description:
     Install browscap
 
 Example:
-    rails generate browscap:install
+    rails generate rails_browscap:install
 
     This will create:
         config/browscap.ini

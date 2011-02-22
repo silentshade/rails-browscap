@@ -17,11 +17,12 @@ module RailsBrowscap
   end
 end
 
-
 module RailsBrowscap
+  # Query the browscap DB
+  # @param [String] User agent string
   def self.query(user_agent)
+    #setup in the initializer
     @@browscap.query(user_agent)
   end
 end
 ActionController::Base.send :include, RailsBrowscap::Controllers::Helpers
-
