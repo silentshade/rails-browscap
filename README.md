@@ -20,30 +20,29 @@ Line 3553
     Parent=Image Crawlers
     Browser=Gallery Grabber
 
-makes the current version of browscap choke. I have monkey patched browscap so you should be fine.
+makes the current version of browscap choke. I have monkey patched browscap so it should be fine.
 
 Also Line 5228
 
-[www.substancia.com AutoHTTPAgent (ver *)]
-Parent=Version Checkers
-Browser=Substância
+    [www.substancia.com AutoHTTPAgent (ver *)]
+    Parent=Version Checkers
+    Browser=Substância
 
 the 'â' make inifile < 0.4.0 choke.
 
-The lib requires inifile >= 0.4.0 so this should be fine.
+The lib requires inifile >= 0.4.0 so this should be fine tpp.
 
-Example
+How To
 =======
 
-initializer/application.rb
+ApplicationController now have a `current_browser` method. That's it.
 
-    BROWSCAP = Browscap.new 'config/browscap.ini'
+Notes
+=======
 
-application_controller.rb
+This is my first rails plugin and it does not quite feels right, I'm sure there is plenty of possible improvements / refactoring.
 
-    def current_browser
-      @current_browser ||= BROWSCAP.query(request.user_agent)
-    end
+Please send me an message or pull requests if you think so, I'm happy to learn.
 
 TODO
 =======

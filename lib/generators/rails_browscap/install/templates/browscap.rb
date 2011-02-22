@@ -1,4 +1,4 @@
 require 'browscap'
-module Rails
+module RailsBrowscap
   @@browscap = ::Browscap.new 'config/browscap.ini'
 end

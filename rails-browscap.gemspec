@@ -3,7 +3,7 @@ $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
   s.name     = "rails-browscap"
-  s.version  = "0.1.0"
+  s.version  = "0.1.1"
   s.author   = "Gilles Devaux"
   s.email    = "gilles.devaux@gmail.com"
   s.homepage = "https://github.com/gilles/rails-browscap"
