@@ -51,7 +51,7 @@ class Browscap
         browser.crawler               = properties['Crawler'].downcase == 'true'
         browser.css_version           = properties['CssVersion'].to_i
         # We can get a nil here, so just rely on CssVersion
-        browser.supports_css          = properties['CssVersion'] > 0 ? 'true' : false
+        browser.supports_css          = properties['CssVersion'].to_i > 0 ? 'true' : false
         browser.aol_version           = properties['aolVersion'].to_i
         browser.aol                   = properties['AOL'].downcase == 'true'
 
