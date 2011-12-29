@@ -50,7 +50,7 @@ class Browscap
         browser.is_syndication_reader = properties['isSyndicationReader'].downcase == 'true'
         browser.crawler               = properties['Crawler'].downcase == 'true'
         browser.css_version           = properties['CssVersion'].to_i
-        # We can a nil here, so just rely on CssVersion
+        # We can get a nil here, so just rely on CssVersion
         browser.supports_css          = properties['CssVersion'] > 0 ? 'true' : false
         browser.aol_version           = properties['aolVersion'].to_i
         browser.aol                   = properties['AOL'].downcase == 'true'
